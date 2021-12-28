@@ -11,3 +11,4 @@ tasks:
 vscode:
   extensions:
     - muhammad-sammy.csharp
+    - ionide.ionide-fsharp

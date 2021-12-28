@@ -1,19 +1,30 @@
-# A .NET Core CLI template on Gitpod
+# Perla + Fable.Lit Template
 
-This is a [.NET Core CLI](https://docs.microsoft.com/en-us/dotnet/core/introduction) template configured for ephemeral development environments on [Gitpod](https://www.gitpod.io/).
+Visit the Perla Docs at https://perla-docs.web.app
 
-## Next Steps
+## Requirements
 
-Click the button below to start a new development environment:
+- [dotnet SDK](http://get.dot.net/)
 
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/gitpod-io/template-dotnet-core-cli-csharp)
+## Editor
 
-## Get Started With Your Own Project
+To write and edit your code, you can use either VS Code + [Ionide](http://ionide.io/), Emacs with [fsharp-mode](https://github.com/fsharp/emacs-fsharp-mode), [Rider](https://www.jetbrains.com/rider/) or Visual Studio.
 
-### A new project
+## Development
 
-Click the above "Open in Gitpod" button to start a new workspace. Once you're ready to push your first code changes, Gitpod will guide you to fork this project so you own it.
+Then to start development mode:
 
-### An existing project
+```bash
+dotnet tool restore
+dotnet perla serve
+```
 
-To get started with .NET Core CLI on Gitpod, add a [`.gitpod.yml`](./.gitpod.yml) file which contains the configuration to improve the developer experience on Gitpod. To learn more, please see the [Getting Started](https://www.gitpod.io/docs/getting-started) documentation.
+This will start the development server after compiling the project, once it is finished, navigate to http://localhost:7331 to view the application .
+
+To build the application and make ready for production:
+
+```
+dotnet perla build
+```
+
+This command builds the application and puts the generated files into `dist`.
